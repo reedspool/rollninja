@@ -1,19 +1,24 @@
 
-var Alea = Meteor.npmRequire('alea');
+const Alea = Meteor.npmRequire('alea');
 
-var prng = new Alea();
+const prng = new Alea();
 
 function randomInt(min, max) {
   return Math.floor(prng() * (max + 1 - min) + min);
 }
 
-function roll() {
+function roll(comment, dieCount) {
+  const sides = 6;
+  const dice = _.range(dieCount).map(() => {
+    return {
+      sides: sides,
+      result: randomInt(1, sides)
+    };
+  });
   return Rolls.insert({
     createdAt: new Date(),
-    result: [
-      randomInt(1, 6),
-      randomInt(1, 6)
-    ]
+    comment: comment,
+    dice: dice
   });
 }
 

@@ -21,11 +21,11 @@ insecure                # Allow all DB writes from clients (for prototyping)
 meteorhacks:npm
 react
 
-
+npm-container
+johnantoni:meteor-normalize
 fourseven:scss
 wolves:bourbon@3.1.0
 wolves:bitters@3.1.0
 wolves:neat@3.1.0
-
-
-npm-container
+underscore
+momentjs:moment

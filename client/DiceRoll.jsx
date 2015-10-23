@@ -4,8 +4,16 @@ DiceRoll = React.createClass({
   },
 
   render() {
+    const roll = this.props.roll;
+    const dice = roll.dice.map((die) => {
+      return (<li>{die.result}</li>)
+    });
     return (
-      <li>{this.props.roll.result[0]} {this.props.roll.result[1]}</li>
+      <li>
+        {moment(roll.createdAt).format('l LT') + ' - '}
+        <ul className="die-list-small">{dice}</ul>
+        {roll.comment ? ' - ' + roll.comment : ''}
+      </li>
     );
   }
 });

@@ -4,10 +4,46 @@
 
 .container {
   @include outer-container;
-  .roll-me {
-    @include span-columns(12);
-  } 
-  .roll-list {
-    @include span-columns(12);
-  } 
+  @include media(50em) {
+    .roll-form {
+      @include span-columns(6);
+      label {
+        @include span-columns(3 of 6);
+        @include omega();
+      }
+      button {
+        @include span-columns(6 of 6);
+      }
+    }
+    .roll-list-container {
+      @include span-columns(6);
+    }
+  }
+}
+
+.roll-form {
+  .form-input-container {
+    padding: 0 0.5em;
+  }
+  label {
+    display: block;
+    > span {
+      padding-right: 1em;
+    }
+    > select {
+      width: 100%;
+    }
+  }
+}
+
+.roll-list-container {
+  padding: 0.5em;
+}
+
+.die-list-small {
+  display: inline-block;
+  > li {
+    display: inline-block;
+    padding: 0 0.2em;
+  }
 }
