@@ -5,8 +5,8 @@ DiceRoll = React.createClass({
 
   render() {
     const roll = this.props.roll;
-    const dice = roll.dice.map((die) => {
-      return (<li>{die.result}</li>)
+    const dice = roll.dice.map((die, i) => {
+      return (<li key={i}>{die.result}</li>)
     });
     return (
       <li>
