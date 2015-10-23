@@ -7,11 +7,11 @@
   @include media(50em) {
     .roll-form {
       @include span-columns(6);
-      label {
+      > label {
         @include span-columns(3 of 6);
         @include omega();
       }
-      button {
+      > div {
         @include span-columns(6 of 6);
       }
     }
@@ -34,6 +34,9 @@
       width: 100%;
     }
   }
+  button {
+    width: 100%;
+  }
 }
 
 .roll-list-container {
@@ -45,5 +48,14 @@
   > li {
     display: inline-block;
     padding: 0 0.2em;
+  }
+}
+
+.die-list-big {
+  display: inline-block;
+  > li {
+    display: inline-block;
+    padding: 0 0.2em;
+    font-size: 3em;
   }
 }

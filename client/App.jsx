@@ -8,9 +8,15 @@ App = React.createClass({
     }
   },
 
+  getInitialState() {
+    return {
+      lastRoll: null
+    };
+  },
+
   renderRolls() {
     return this.data.rolls.map((roll) => {
-      return <DiceRoll key={roll._id} roll={roll} />;
+      return <li key={roll._id}><DiceRoll roll={roll} /></li>;
     });
   },
 
@@ -18,7 +24,11 @@ App = React.createClass({
     event.preventDefault();
     const comment = React.findDOMNode(this.refs.comment).value.trim();
     const dieCount = parseInt(React.findDOMNode(this.refs.dieCount).value.trim(), 10);
-    Meteor.call('roll', comment, dieCount);
+    Meteor.promise('roll', comment, dieCount).then((id) => {
+      this.setState({
+        lastRoll: Rolls.findOne(id)
+      });
+    });
   },
 
   render() {
@@ -41,6 +51,9 @@ App = React.createClass({
           </label>
           <div className="form-input-container">
             <button type="submit">Roll!</button>
+          </div>
+          <div className="form-input-container">
+            <BigDiceRoll roll={this.state.lastRoll} />
           </div>
         </form>
         <div className="roll-list-container">
