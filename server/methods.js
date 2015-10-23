@@ -22,8 +22,10 @@ function roll(comment, dieCount) {
   });
 }
 
-Meteor.startup(function () {
-  Meteor.methods({
-    roll: roll
-  });
+Meteor.methods({
+  roll: roll
+});
+
+Meteor.publish('rolls', () => {
+  return Rolls.find();
 });
