@@ -8,15 +8,10 @@ SVGSixSidedDie = React.createClass({
 
     const id = "#die" + (value || 1);
 
-    const injectedUseTag = '<use xlink:href="' + id + '" />';
+function createMarkup() { return { __html: '<use xlink:href="' + id + '" />' }; };
 
-    const injectedSvgTag = '<svg class="die-svg-use" xmlns="http://www.w3.org/2000/svg">'
-        + injectedUseTag
-        + '</svg>';
     return (
-      <div>
-        {{injectedSvgTag}}
-      </div>
+      <svg className="die-svg-use" dangerouslySetInnerHTML={createMarkup()} />
     );
   }
 });
