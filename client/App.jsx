@@ -38,6 +38,7 @@ App = React.createClass({
     });
     return (
       <div className="container">
+        <SVGDefs />
         <form className="roll-form" onSubmit={this.handleSubmit}>
           <label className="form-input-container">
             Note

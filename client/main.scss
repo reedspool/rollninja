@@ -21,6 +21,10 @@
   }
 }
 
+svg.defs {
+  display: none;
+}
+
 .roll-form {
   .form-input-container {
     padding: 0 0.5em;
@@ -58,4 +62,9 @@
     padding: 0 0.2em;
     font-size: 3em;
   }
+}
+
+.die-svg-use {
+  height: 198.02px;
+  width: 210.021px;
 }
