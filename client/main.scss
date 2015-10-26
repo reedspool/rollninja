@@ -47,11 +47,27 @@ svg.defs {
   padding: 0.5em;
 }
 
+
+.die-svg-use {
+  height: 198.02px;
+  width: 210.021px;
+}
+
 .die-list-small {
   display: inline-block;
   > li {
     display: inline-block;
     padding: 0 0.2em;
+  }
+
+  .die-svg-use {
+    height: 24.75px;
+    width: 26.25px;
+
+    // Hackish positioning because the SVG is not aligned at top-left. Need to correct
+    position: relative;
+    top: 7px;
+    margin-right: -4px;
   }
 }
 
@@ -64,7 +80,4 @@ svg.defs {
   }
 }
 
-.die-svg-use {
-  height: 198.02px;
-  width: 210.021px;
-}
+

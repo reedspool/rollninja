@@ -6,7 +6,7 @@ DiceRoll = React.createClass({
   render() {
     const roll = this.props.roll;
     const dice = roll.dice.map((die, i) => {
-      return (<li key={i}>{die.result}</li>)
+      return (<li key={i}><SVGSixSidedDie value={die.result} />:&nbsp;<span>{die.result}</span></li>)
     });
     return (
       <span>
