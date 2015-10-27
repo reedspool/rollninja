@@ -9,8 +9,7 @@ BigDiceRoll = React.createClass({
       return (<div></div>)
     }
     const dice = roll.dice.map((die, i) => {
-      // return (<li key={i}>{die.result}</li>)
-      return <SVGSixSidedDie key={i} value={die.result} />;
+      return <li key={i}><SVGSixSidedDie value={die.result} /></li>;
     });
     return (
       <div class="big-dice-roll">
