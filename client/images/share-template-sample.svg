@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 250.7 154" enable-background="new 0 0 250.7 154" xml:space="preserve">
+<g id="roll-die-wrapper">
+	<g id="die_4">
+		<path d="M149.3,93.2c0,2.5-2,4.5-4.5,4.5h-39c-2.5,0-4.5-2-4.5-4.5V54.7c0-2.5,2-4.5,4.5-4.5h39c2.5,0,4.5,2,4.5,4.5V93.2z"/>
+		<circle fill="#FFFFFF" cx="125.3" cy="73.9" r="4.5"/>
+		<g>
+			<circle fill="#FFFFFF" cx="112.3" cy="59.4" r="4.5"/>
+		</g>
+		<g>
+			<circle fill="#FFFFFF" cx="138.3" cy="86.9" r="4.5"/>
+		</g>
+	</g>
+</g>
+<g id="roll-page-url">
+	
+		<text id="roll-page-url-text_2_" transform="matrix(1 0 0 1 21.8598 133.8965)" font-family="'MyriadPro-Regular'" font-size="10px">http://rollninja.meteor.com/C7qkd5wPacvYTaKZp</text>
+</g>
+<g id="roll-title">
+	<text transform="matrix(1 0 0 1 68.4662 25.1035)" font-family="'MyriadPro-Regular'" font-size="12px">I rolled a die and got 3!</text>
+</g>
+</svg>

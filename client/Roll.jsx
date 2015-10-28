@@ -15,13 +15,18 @@ Roll = React.createClass({
     }
   },
 
+  // TODO: This utility seems like it could be better placed
+  total(roll) {
+    return roll.dice.reduce((total, die) => {
+            return total + die.result;
+          }, 0)
+  },
+
   renderTotal(roll) {
     if (roll) {
       return (
         <p>
-          <strong>Total:</strong> {roll.dice.reduce((total, die) => {
-            return total + die.result;
-          }, 0)}
+          <strong>Total:</strong> {this.total(roll)}
         </p>
       )
     }
@@ -37,6 +42,7 @@ Roll = React.createClass({
         {this.renderComment(roll)}
         {this.renderTotal(roll)}
         <BigDiceRoll roll={roll} />
+        <SVGShareImage roll={roll} />
       </div>
     );
   }
