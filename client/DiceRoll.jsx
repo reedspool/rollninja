@@ -10,7 +10,7 @@ DiceRoll = React.createClass({
     });
     return (
       <span>
-        {moment(roll.createdAt).format('l LT') + ' - '}
+        <a href={'/' + roll._id}>{moment(roll.createdAt).format('l LT') + ' - '}</a>
         <ul className="die-list-small">{dice}</ul>
         {roll.comment ? ' - ' + roll.comment : ''}
       </span>

@@ -1,5 +1,13 @@
 Meteor.subscribe('rolls');
 
-Meteor.startup(function () {
-  React.render(<App />, document.getElementById('app-container'));
+FlowRouter.route('/', {
+  action() {
+    ReactLayout.render(App, {content: <RollForm />});
+  }
+});
+
+FlowRouter.route('/:rollId', {
+  action(params) {
+    ReactLayout.render(App, {content: <Roll {...params} />});
+  }
 });

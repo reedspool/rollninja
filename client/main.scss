@@ -2,6 +2,15 @@
 @import "{wolves:bitters}/base";
 @import "{wolves:neat}/neat";
 
+.button {
+  @extend button;
+}
+
+.roll-again {
+  display: block;
+  text-align: center;
+}
+
 .container {
   @include outer-container;
   @include media(50em) {
@@ -15,10 +24,17 @@
         @include span-columns(6 of 6);
       }
     }
+    .roll {
+      @include span-columns(6);
+    }
     .roll-list-container {
       @include span-columns(6);
     }
   }
+}
+
+h3 {
+  font-size: 1.5em;
 }
 
 svg.defs {
